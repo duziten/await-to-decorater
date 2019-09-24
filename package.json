@@ -1,0 +1,44 @@
+{
+  "name": "await-to-decorater",
+  "version": "1.0.0",
+  "description": "Async/await decorater for easy error handling in js, inspired by await-to-js",
+  "main": "./dist/await-to-decorater.umd.js",
+  "module": "./dist/await-to-decorater.es.js",
+  "scripts": {
+    "test": "jest",
+    "clean": "rimraf dist",
+    "build": "npm run clean && rollup -c",
+    "debug": "babel-node ./test/api.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "async await",
+    "await function",
+    "decorater",
+    "catch error",
+    "es8",
+    "javascript"
+  ],
+  "author": "duziten",
+  "license": "MIT",
+  "dependencies": {
+    "await-to-js": "^2.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.21.4",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.4.2"
+  }
+}
