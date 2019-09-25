@@ -1,6 +1,6 @@
 {
   "name": "await-to-decorater",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Async/await decorater for easy error handling in js, inspired by await-to-js",
   "main": "./dist/await-to-decorater.umd.js",
   "module": "./dist/await-to-decorater.es.js",
