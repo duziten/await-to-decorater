@@ -1,6 +1,5 @@
 import to from 'await-to-js';
 
-
 /**
  * async/await decorater
  * @param {object} errExt extra error object
