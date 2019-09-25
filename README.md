@@ -11,6 +11,7 @@ You can decorate your class property functions with decorator, if you use babel 
 
 ## Feature
 
+- Fully compatible with `await-to-js`
 - No `try catch` statement, auto catch error
 - Very simple to use, support decorate class properties function
 - Don't `import to from 'await-to-js'` everywhere, just in `api service` file
@@ -25,12 +26,30 @@ yarn add await-to-decorater
 
 ## Usage
 
+### Basic
+
+// you can import `to` from `await-to-decorater` to use
+
+```js
+// always import `to` to wrap
+import { to } from "await-to-decorater";
+import { getTigers } from "./api";
+
+loadData = async () => {
+  const [err, res] = await to(getTigers());
+  // ...
+};
+```
+
+### Recommend
+
 // api.js --- your api service file
 
 ```js
 import Atd from "await-to-decorater";
 import axios from "axios";
 
+// Simply declare a service class to make your code structure clearer
 class ZooService {
   @Atd()
   getAnimal() {
@@ -49,6 +68,8 @@ class ZooService {
     return axios.get("xxx/tigers");
   };
 }
+
+// export instance
 export default new ZooService();
 ```
 
