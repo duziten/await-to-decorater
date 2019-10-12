@@ -46,24 +46,24 @@ loadData = async () => {
 // api.js --- your api service file
 
 ```js
-import Atd from "await-to-decorater";
+import Catch from "await-to-decorater";
 import axios from "axios";
 
 // Simply declare a service class to make your code structure clearer
 class ZooService {
-  @Atd()
+  @Catch()
   getAnimal() {
     return axios.get("xxx/animals");
   }
 
   // class properties and with query
-  @Atd()
+  @Catch()
   getTigers = type => {
     return axios.get(`xxx/tigers/${type}`);
   };
 
   // error extra
-  @Atd({ extra: "example" })
+  @Catch({ extra: "example" })
   getLions = () => {
     return axios.get("xxx/tigers");
   };
